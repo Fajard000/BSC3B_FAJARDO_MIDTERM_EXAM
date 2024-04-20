@@ -1,0 +1,322 @@
+body {
+  background-color: #191e36; /* You can also use a hex code like #f0f0f0 */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+
+/*------------HEADER-------------*/
+/*-----top part: contains nav-----*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000;
+}
+ /*portfolio text*/
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*section text*/
+nav li {
+  display: inline-block;
+  margin-right: 80px;
+}
+/*HOVER EFFECT*/
+nav a:hover {
+  color: #25577c;
+
+}
+
+/*section text*/
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  display: flex;
+}
+
+section {
+  flex: 1;
+  padding: 2rem;
+}
+
+/*--Aside--*/
+aside {
+  width: 20%;
+  padding: 2rem;
+  background-color: #ffffff;
+  margin-top: 100px;
+  margin-left: 500px;
+  border-radius: 20px;
+  
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+  align-items: center;
+
+
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+  header, main, aside {
+    flex-direction: column;
+  }
+
+  
+
+  section {
+    padding: 1rem;
+  }
+}
+
+.optional {
+  display: none;
+}
+
+/*----------hero-------------*/
+
+.hero {
+  display: flex;
+  min-height: 20vh; /*section height */
+  background-position: center;
+  background-size: cover; 
+  margin-bottom: auto;
+
+}
+span {
+  color: #25577c;
+  font-size: 40px;
+}
+
+.hero-content {
+  flex: 1; /* Take up remaining space after image */
+  color: rgb(255, 255, 255); /* Text color for hero content */
+  text-align: center; /* Center text within hero section */
+  padding: 2rem; /* Padding for content within hero section */
+  margin-top: 160px;
+  line-height: 40px;
+  font-size: 20px;
+  
+}
+
+.hero-image {
+  flex: 0 0 50%; /* Set image to take up 50% width*/
+  position: relative; /* Needed for proper layering */
+}
+
+ /*hero image*/
+.hero-image img {
+  width: 70%; 
+  height: 60%;
+  border: 7px solid #25577c;
+  background-color: rgb(255, 255, 255);
+ border-radius: 50%; /* Create a circle border */
+  margin-top: 100px;
+
+}
+
+
+.hero-button {
+  background-color: #ffffff; /* Match header background color */
+  color: rgb(5, 5, 5);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Indicate clickable button */
+}
+
+
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-image {
+    display: none; /* Hide image on smaller screens */
+  }
+}
+
+/*---------------ABOUT--------------*/
+#about {
+  text-align: center; /* Center the content */
+  padding: 1rem 1rem; /* Add some padding above and below */
+  margin-top: 2rem; /* Add a small top margin */
+  background-color: #ddd;
+}
+
+#about p {
+  line-height: 1.5; /* Adjust line spacing for readability */
+}
+
+
+
+
+/*---------------SKILLS--------------*/
+
+#skills {
+  margin-top: 0;
+ margin-bottom: 100px;
+  
+}
+.title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-top: 70px;
+  color: #fff;
+  font-size: 20px;
+  
+}
+/*skill: box with img and text*/
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  grid-gap: 30px; /* Optional spacing between boxes */
+  margin-left: 60px;
+  margin-right: 60px;
+  
+}
+/*box itself*/
+.skill-box{
+  background-color: #656469;
+  align-items: center;
+  height: 100%;
+  border-radius: 40px;
+ 
+}
+/*img inside the box*/
+.skill-box img {
+  width: 40%; /* Adjust as needed */
+  height: 40%; /* Adjust as needed */
+  object-fit: cover; /* Optional for maintaining aspect ratio */
+  padding-left: 110px;
+}
+.skill-box p{
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+/*title of each box*/
+.skill-box h3 {
+  text-align: center;
+}
+/*HOVER EFFECT*/
+.skill-box:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1); /* Optional hover shadow */
+}
+
+/*--------------ACHIVEMNETS-----------*/
+#achievements {
+  text-align: center; /* Center the achievements horizontally */
+}
+/*box*/
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* Two columns */
+   gap: 20px; 
+  margin: 0 auto; /* Center the grid*/
+  align-items: center;
+}
+/*inside teh box*/
+.achievement-card {
+  background-color: #fff; 
+  border-radius: 5px;
+  padding: 20px; /* Padding for content */
+  
+}
+/*Hover:box*/
+.achievement-card:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(160, 23, 23, 0.2); /* Increase shadow on hover */
+  background-color: #656469;
+}
+/*achievement:title*/
+.achievement-card h3 {
+  margin-bottom: 10px; /* Spacing between title and description */
+  font-size: 18px;
+  font-weight: bold;
+}
+/*achievement:description*/
+.achievement-card p {
+  line-height: 1.5; /* Adjust line spacing for readability */
+  color: #333; /* Text color */
+}
+
+
+
+
+/*--------------TRAININGS-----------*/
+
+#trainings {
+  text-align: center; /* Center the achievements horizontally */
+  margin-top: 30px;
+}
+.training-list {
+  display: flex; /*  next line if needed */
+  flex-wrap: wrap; 
+  margin: 20px 0; /* Spacing above and below */
+  justify-content: center;
+}
+
+.training-item {
+  width: 300px; /* Adjust width of each training item */
+  margin: 10px; /* Spacing between training items */
+  padding: 15px; /* Padding for content */
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #25577c;
+}
+
+.training-date {
+  font-weight: bold;
+  margin-bottom: 5px; /* Spacing between date and description */
+}
+
+/*footer*/
+
+.footer {
+  margin: 80px 0 10px;
+  text-align: center;
+  background-color: #25577c;
+  padding: 1rem;
+  
+}
+/*footer icon*/
+.footer a { 
+  text-decoration:none;
+  color: #ffffff;
+  font-size: 22px;
+  margin: 1px 10px; /*put spaces between the icon*/
+  
+}
+
+
+
